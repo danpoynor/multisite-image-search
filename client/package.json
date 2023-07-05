@@ -1,0 +1,82 @@
+{
+  "name": "multisite-image-search",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "lint:no-cache": "next lint --no-cache"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.7.15",
+    "@heroicons/react": "^2.0.18",
+    "@types/node": "^20.4.1",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "ag-grid-community": "^30.0.3",
+    "ag-grid-react": "^30.0.4",
+    "autoprefixer": "^10.4.14",
+    "clsx": "^2.0.0",
+    "eslint": "^8.45.0",
+    "eslint-config-next": "^13.4.11",
+    "flickr-sdk": "^6.3",
+    "framer-motion": "^10.13.0",
+    "next": "^14.0.2",
+    "next-auth": "^4.24.5",
+    "pexels": "^1.4.0",
+    "postcss": "^8.4.25",
+    "punycode": "^2.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.3.3",
+    "theme-change": "^2.5.0",
+    "typescript": "^5.1.6",
+    "unsplash-js": "^7.0.18"
+  },
+  "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.4",
+    "eslint-plugin-tailwindcss": "^3.13.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "next/core-web-vitals",
+      "plugin:tailwindcss/recommended"
+    ],
+    "plugins": [
+      "tailwindcss"
+    ],
+    "settings": {
+      "tailwindcss": {
+        "whitelist": [
+          "ag-theme-alpine",
+          "ag-theme-customized"
+        ]
+      }
+    },
+    "rules": {
+      "no-unused-vars": [
+        "warn",
+        {
+          "argsIgnorePattern": "^_",
+          "varsIgnorePattern": "^_"
+        }
+      ]
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
