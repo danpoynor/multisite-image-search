@@ -1,0 +1,43 @@
+{
+  "name": "multisite-image-search",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@types/node": "20.3.3",
+    "@types/react": "18.2.14",
+    "@types/react-dom": "18.2.6",
+    "autoprefixer": "10.4.14",
+    "dotenv": "^16.3.1",
+    "eslint": "8.44.0",
+    "eslint-config-next": "13.4.8",
+    "next": "13.4.8",
+    "pexels": "^1.4.0",
+    "postcss": "8.4.24",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwindcss": "3.3.2",
+    "typescript": "5.1.6",
+    "unsplash-js": "^7.0.18"
+  },
+  "devDependencies": {
+    "eslint-plugin-tailwindcss": "^3.13.0"
+  },
+  "browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
+}
