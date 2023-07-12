@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useRef } from 'react';
 import Container from '../components/container';
 import { PhotoSite } from '../types';
 import Link from 'next/link';
@@ -7,6 +7,7 @@ import { MagnifyingGlassIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-alpine.css';
+import { GridApi } from 'ag-grid-community';
 
 // Fetch photo sites data from JSON file
 async function getPhotoSitesFromJson(): Promise<PhotoSite[]> {
@@ -53,21 +54,23 @@ interface PhotoSitesTableProps {
 }
 
 function PhotoSitesTable({ photoSites }: PhotoSitesTableProps) {
+
   // Define columns for AgGridReact component
   const columnDefs = useMemo(
     () => [
-      { headerName: 'ID', field: 'id' },
+      { headerName: 'ID', field: 'id', width: 50 },
       {
         headerName: 'Included',
         field: 'included',
         cellRenderer: function IncludedCellRenderer(params: { value: any }) {
           const included = params.value;
           return included ? (
-            <span style={{ color: 'green', fontWeight: 'bold' }}>&#10003;</span>
+            <span style={{ display: 'flex', justifyContent: 'center', color: 'green', fontWeight: 'bold' }}>&#10003;</span>
           ) : (
-            <span style={{ color: 'red', fontWeight: 'bold' }}>&#10007;</span>
+            <span style={{ display: 'flex', justifyContent: 'center', color: 'red', fontWeight: 'bold' }}>&#10007;</span>
           );
         },
+        width: 96,
       },
       {
         headerName: 'Name',
@@ -84,16 +87,15 @@ function PhotoSitesTable({ photoSites }: PhotoSitesTableProps) {
         },
       },
       { headerName: 'API Documentation Link', field: 'api_documentation_link' },
-      { headerName: 'Notes', field: 'notes' },
+      { headerName: 'Notes', field: 'notes', flex: 1 },
     ],
     []
   );
 
   const defaultColDef = useMemo(
     () => ({
+      // flex: 1,
       sortable: true,
-      filter: true,
-      resizable: true,
     }),
     []
   );
@@ -103,7 +105,7 @@ function PhotoSitesTable({ photoSites }: PhotoSitesTableProps) {
 
   // Render AgGridReact component with column definitions and photo sites data
   return (
-    <div className="ag-theme-alpine-dark" style={{ height: '740px', width: '100%' }}>
+    <div className="ag-theme-alpine-dark" style={{ height: '740px'  }}>
       <AgGridReact
         columnDefs={columnDefs}
         defaultColDef={defaultColDef}
