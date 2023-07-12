@@ -98,3 +98,17 @@ export interface ErrorResponse {
     photos_count: number;
     videos_count: number;
   }
+
+  export interface PhotoSite {
+    id: number;
+    included: boolean;
+    name: string;
+    site_url: string;
+    description: string;
+    api_status: string;
+    api_documentation_link: string;
+    api_key_required: boolean;
+    registration_required: boolean;
+    logo_image: string;
+    notes: string;
+  }

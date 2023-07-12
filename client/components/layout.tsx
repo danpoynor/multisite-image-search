@@ -1,9 +1,7 @@
-import { ReactNode } from 'react';
-import Header from './header'
+import { ReactNode, useEffect } from 'react';
+import React from 'react';
+import Header from './header/header'
 import Footer from './footer'
-
-import { useState } from 'react';
-import { searchPhotos } from './searchPhotos'
 
 import '../app/globals.css'
 
@@ -13,10 +11,10 @@ type LayoutProps = {
 
 export default function Layout({ children }: LayoutProps) {
     return (
-        <>
+        <div className="flex flex-col min-h-screen">
             <Header />
-            <main>{children}</main>
+            <main className="flex flex-grow">{children}</main>
             <Footer />
-        </>
+        </div>
     )
 }

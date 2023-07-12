@@ -1,10 +1,11 @@
 import { createApi as createUnsplashClient } from 'unsplash-js';
 import { createClient as createPexelsClient } from 'pexels';
-import dotenv from 'dotenv';
+import Flickr from 'flickr-sdk';
 
 // Get API Keys from environment variables
 const UNSPLASH_ACCESS_KEY = process.env.NEXT_PUBLIC_UNSPLASH_ACCESS_KEY;
 const PEXELS_API_KEY = process.env.NEXT_PUBLIC_PEXELS_API_KEY;
+const FLICKR_API_KEY = process.env.NEXT_PUBLIC_FLICKR_API_KEY
 
 // Check if environment variables are defined
 if (!UNSPLASH_ACCESS_KEY) {
@@ -15,6 +16,10 @@ if (!PEXELS_API_KEY) {
     throw new Error('Missing NEXT_PUBLIC_PEXELS_API_KEY');
 }
 
+if (!FLICKR_API_KEY) {
+    throw new Error('Missing NEXT_PUBLIC_FLICKR_API_KEY');
+}
+
 // Create clients
 const unsplashClient = createUnsplashClient({
     accessKey: UNSPLASH_ACCESS_KEY,
@@ -22,11 +27,14 @@ const unsplashClient = createUnsplashClient({
 
 const pexelsClient = createPexelsClient(PEXELS_API_KEY);
 
+const flickr = new Flickr(FLICKR_API_KEY);
+
 // Export searchPhotos function
 export async function searchPhotos(searchTerm: string, selectedWebsites: string[]) {
     try {
         let unsplashResults = [];
         let pexelsResults = [];
+        let flickrResults = [];
 
         // Unsplash
         if (selectedWebsites.includes('unsplash')) {
@@ -44,10 +52,20 @@ export async function searchPhotos(searchTerm: string, selectedWebsites: string[
             }
         }
 
-        const combinedResults = [...unsplashResults, ...pexelsResults];
+        // Flickr
+        if (selectedWebsites.includes('flickr')) {
+            const response = await flickr.photos.search({
+                text: searchTerm
+            });
+            if (response && response.body && response.body.photos) {
+                flickrResults = Array.isArray(response.body.photos.photo) ? response.body.photos.photo : Array.from(response.body.photos.photo);
+            }
+        }
+
+        const combinedResults = [...unsplashResults, ...pexelsResults, ...flickrResults];
 
         return combinedResults;
     } catch (error) {
-        throw new Error('Failed to search for photos');
+        throw new Error('Failed to search for photos: ' + error.message || '');
     }
 }

@@ -1,8 +1,15 @@
+import Container from '../components/container'
+
+export const metadata = {
+  title: "About",
+  description: "About page",
+}
+
 export default function About() {
   return (
-    <main className="container mx-auto max-w-4xl p-4">
-      <h1 className="text-2xl font-bold mb-4">About Us</h1>
+    <Container>
+      <h1 className="text-2xl font-bold mt-8">About Us</h1>
       <p>We are a company that provides high-quality photos for your projects.</p>
-    </main>
+    </Container>
   );
 }

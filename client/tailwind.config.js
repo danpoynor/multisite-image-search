@@ -14,5 +14,14 @@ module.exports = {
       },
     },
   },
-  plugins: []
+  daisyui: {
+    themes: ["light", "dark", "cupcake"],
+  },
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/aspect-ratio'),
+  ],
+  corePlugins: {
+		preflight: false,
+	},
 }
