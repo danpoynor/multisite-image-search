@@ -58,7 +58,12 @@ function PhotoSitesTable({ photoSites }: PhotoSitesTableProps) {
   // Define columns for AgGridReact component
   const columnDefs = useMemo(
     () => [
-      { headerName: 'ID', field: 'id', width: 50 },
+      {
+        headerName: 'ID',
+        field: 'id',
+        width: 60,
+        cellStyle: { textAlign: 'right' },
+      },
       {
         headerName: 'Included',
         field: 'included',
@@ -86,7 +91,7 @@ function PhotoSitesTable({ photoSites }: PhotoSitesTableProps) {
           );
         },
       },
-      { headerName: 'API Documentation Link', field: 'api_documentation_link' },
+      { headerName: 'API Documentation Link', field: 'api_documentation_link', flex: 1 },
       { headerName: 'Notes', field: 'notes', flex: 1 },
     ],
     []
