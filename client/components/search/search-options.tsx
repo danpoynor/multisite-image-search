@@ -16,7 +16,7 @@ export default function SearchOptions({ name, selectedWebsites, handleWebsiteSel
                     value={name.toLowerCase()}
                     checked={selectedWebsites.includes(name.toLowerCase())}
                     onChange={handleWebsiteSelectionChange}
-                    className="checkbox focus:ring-indigo-600 ring-[#50d71e]"
+                    className="checkbox"
                 />
                 <span className="ml-2">{name}</span>
             </label>

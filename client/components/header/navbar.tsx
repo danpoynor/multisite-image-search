@@ -42,8 +42,8 @@ const navItems: {[key: string]: NavItem} = {
 
 function getLinkClassNames(isActive: boolean) {
   return clsx('transition-all z-[1] px-[.5rem] py-[.33rem] rounded-md leading-8', {
-    'text-slate-100 cursor-default hover:text-slate-100': isActive,
-    'text-slate-500 cursor-pointer hover:text-slate-400': !isActive,
+    'cursor-default text-[--color-content-300]': isActive,
+    'cursor-pointer text-[--color-content-500] hover:text-[--color-content-100]': !isActive,
   });
 }
 
@@ -78,7 +78,7 @@ export default function HeaderNavbar() {
           {/* Create the background shape and animate it */}
           {navItems[pathname] && (
             <motion.div
-              className="absolute bg-slate-500 rounded-md h-8 top-0 left-0 !m-0 p-0 z-[-1]"
+              className="absolute rounded-md h-8 top-0 left-0 !m-0 p-0 z-[-1] bg-[--color-primary]"
               initial={{
                 opacity: 0,
                 x: navItems[pathname].x,
@@ -86,7 +86,7 @@ export default function HeaderNavbar() {
                 width: navItems[pathname].w
               }}
               animate={{
-                opacity: .33,
+                opacity: .66,
                 x: navItems[pathname].x,
                 y: navItems[pathname].y,
                 width: navItems[pathname].w,

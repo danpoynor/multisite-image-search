@@ -37,12 +37,7 @@ html, body, blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre {
   margin: 0;
 }
 
-/* Setup DaisyUI themes */
-:root {
-  --color-default: #fff;
-}
-
-@media (prefers-color-scheme: dark){
+@media (prefers-color-scheme: dark) {
 	:root{
 		--color-default: #252b30;
     --color-secondary: #ffffff;
@@ -55,7 +50,6 @@ html, body, blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre {
   --color-default: #fff;
   --color-primary: #a0aec0;
   --color-secondary: #718096;
-  --color-accent: #cbd5e0;
   --color-content-100: #f7fafc;
   --color-content-200: #edf2f7;
   --color-content-300: #e2e8f0;
@@ -67,91 +61,79 @@ html, body, blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre {
   --color-content-900: #1a202c;
 }
 
-[data-theme='light'] {
-  --color-default: #fff;
-  --color-primary: #a0aec0;
-  --color-secondary: #718096;
-  --color-accent: #cbd5e0;
-  --color-content-100: #f7fafc;
-  --color-content-200: #edf2f7;
-  --color-content-300: #e2e8f0;
-  --color-content-400: #cbd5e0;
-  --color-content-500: #a0aec0;
-  --color-content-600: #718096;
-  --color-content-700: #4a5568;
-  --color-content-800: #2d3748;
-  --color-content-900: #1a202c;
-}
-
+/* NOTE: hsla format used to override ag-grid transparency issue */
 [data-theme='slate-light'] {
-  --color-default: hsl(0, 0%, 0%); /* black */
-  --color-primary: hsl(0, 0%, 100%); /* white */
-  --color-secondary: hsl(210, 40%, 98%); /* slate-50 */
-  --color-content-50: hsl(229, 84%, 5%); /* slate-950 */
-  --color-content-100: hsl(222.2,47.4%,11.2%); /* slate-900 */
-  --color-content-200: hsl(217.2,32.6%,17.5%); /* slate-800 */
-  --color-content-300: hsl(215.3,25%,26.7%); /* slate-700 */
-  --color-content-400: hsl(215.3,19.3%,34.5%); /* slate-600 */
-  --color-content-500: hsl(215.4,16.3%,46.9%); /* slate-500 */
-  --color-content-600: hsl(215,20.2%,65.1%); /* slate-400 */
-  --color-content-700: hsl(212.7,26.8%,83.9%); /* slate-300 */
-  --color-content-800: hsl(214.3,31.8%,91.4%); /* slate-200 */
-  --color-content-900: hsl(210,40%,96.1%); /* slate-100 */
-  --color-content-950: hsl(210, 40%, 98%); /* slate-50 */
+  --color-default: hsla(0, 0%, 0%, 1); /* black-5 */
+  --color-primary: hsla(0, 0%, 100%, 1); /* white */
+  --color-secondary: hsla(210, 40%, 98%, 1); /* slate-50 */
+  --color-content-50: hsla(229, 84%, 5%, 1); /* slate-950 */
+  --color-content-100: hsla(222.2, 47.4%, 11.2%, 1); /* slate-900 */
+  --color-content-200: hsla(217.2, 32.6%, 17.5%, 1); /* slate-800 */
+  --color-content-300: hsla(215.3, 25%, 26.7%, 1); /* slate-700 */
+  --color-content-400: hsla(215.3, 19.3%, 34.5%, 1); /* slate-600 */
+  --color-content-500: hsla(215.4, 16.3%, 46.9%, 1); /* slate-500 */
+  --color-content-600: hsla(215, 20.2%, 65.1%, 1); /* slate-400 */
+  --color-content-700: hsla(212.7, 26.8%, 83.9%, 1); /* slate-300 */
+  --color-content-800: hsla(214.3, 31.8%, 91.4%, 1); /* slate-200 */
+  --color-content-900: hsla(210, 40%, 96.1%, 1); /* slate-100 */
+  --color-content-950: hsla(210, 40%, 98%, 1); /* slate-50 */
 }
 
 [data-theme='slate-dark'] {
-  --color-default: hsl(0, 0%, 100%); /* white*/
-  --color-primary: hsl(0, 0%, 0%); /* black */
-  --color-secondary: hsl(229, 84%, 5%); /* slate-950 */
-  --color-content-50: hsl(210, 40%, 98%); /* slate-50 */
-  --color-content-100: hsl(210,40%,96.1%); /* slate-100 */
-  --color-content-200: hsl(214.3,31.8%,91.4%); /* slate-200 */
-  --color-content-300: hsl(212.7,26.8%,83.9%); /* slate-300 */
-  --color-content-400: hsl(215,20.2%,65.1%); /* slate-400 */
-  --color-content-500: hsl(215.4,16.3%,46.9%); /* slate-500 */
-  --color-content-600: hsl(215.3,19.3%,34.5%); /* slate-600 */
-  --color-content-700: hsl(215.3,25%,26.7%); /* slate-700 */
-  --color-content-800: hsl(217.2,32.6%,17.5%); /* slate-800 */
-  --color-content-900: hsl(222.2,47.4%,11.2%); /* slate-900 */
-  --color-content-950: hsl(229, 84%, 5%); /* slate-950 */
+  --color-default: hsla(0, 0%, 100%, 1); /* white*/
+  --color-primary: hsla(0, 0%, 0%, 1); /* black */
+  --color-secondary: hsla(229, 84%, 5%, 1); /* slate-950 */
+  --color-content-50: hsla(210, 40%, 98%, 1); /* slate-50 */
+  --color-content-100: hsla(210, 40%, 96.1%, 1); /* slate-100 */
+  --color-content-200: hsla(214.3, 31.8%, 91.4%, 1); /* slate-200 */
+  --color-content-300: hsla(212.7,26.8%, 83.9%, 1); /* slate-300 */
+  --color-content-400: hsla(215,20.2%, 65.1%, 1); /* slate-400 */
+  --color-content-500: hsla(215.4,16.3%, 46.9%, 1); /* slate-500 */
+  --color-content-600: hsla(215.3, 19.3%, 34.5%, 1); /* slate-600 */
+  --color-content-700: hsla(215.3, 25%, 26.7%, 1); /* slate-700 */
+  --color-content-800: hsla(217.2, 32.6%, 17.5%, 1); /* slate-800 */
+  --color-content-900: hsla(222.2, 47.4%, 11.2%, 1); /* slate-900 */
+  --color-content-950: hsla(229, 84%, 5%, 1); /* slate-950 */
 }
 
-[data-theme='dark'] {
-  --color-default: #252b30;
-  --color-secondary: #ffffff;
-  --color-content-100: #1a202c;
-  --color-content-200: #2d3748;
-  --color-content-300: #4a5568;
-  --color-content-400: #718096;
-  --color-content-500: #a0aec0;
-  --color-content-600: #cbd5e0;
-  --color-content-700: #e2e8f0;
-  --color-content-800: #edf2f7;
-  --color-content-900: #f7fafc;
+[data-theme='light-grey'] {
+  --color-default: hsla(0, 0%, 5%, 1); /* black-5 */
+  --color-primary: hsla(0, 0%, 100%, 1); /* white */
+  --color-secondary: hsla(0, 0%, 5%, 1);
+  --color-content-50: hsla(0, 0%, 1%, 1);
+  --color-content-100: hsla(0, 0%, 15%, 1);
+  --color-content-200: hsla(0, 0%, 2%, 1);
+  --color-content-300: hsla(0, 0%, 30%, 1);
+  --color-content-400: hsla(0, 0%, 40%, 1);
+  --color-content-500: hsla(0, 0%, 50%, 1);
+  --color-content-600: hsla(0, 0%, 60%, 1);
+  --color-content-700: hsla(0, 0%, 80%, 1);
+  --color-content-800: hsla(0, 0%, 85%, 1);
+  --color-content-900: hsla(0, 0%, 92%, 1);
+  --color-content-950: hsla(0, 0%, 98%, 1);
 }
 
-[data-theme='black'] {
-  --color-primary: #ffffff;
-  --color-default: #000000;
-  --color-secondary: #ffffff;
-  --color-accent: #ffffff;
-  --color-content-100: #000000;
-  --color-content-200: #000000;
-  --color-content-300: #000000;
-  --color-content-400: #ffffff;
-  --color-content-500: #ffffff;
-  --color-content-600: #ffffff;
-  --color-content-700: #ffffff;
-  --color-content-800: #ffffff;
-  --color-content-900: #ffffff;
+[data-theme='dark-grey'] {
+  --color-default: hsla(0, 0%, 100%, 1); /* white */
+  --color-primary: hsla(0, 0%, 0%, 1); /* black */
+  --color-secondary: hsla(0, 0%, 15%, 1);
+  --color-content-50: hsla(0, 0%, 95%, 1);
+  --color-content-100: hsla(0, 0%, 90%, 1);
+  --color-content-200: hsla(0, 0%, 80%, 1);
+  --color-content-300: hsla(0, 0%, 70%, 1);
+  --color-content-400: hsla(0, 0%, 60%, 1);
+  --color-content-500: hsla(0, 0%, 50%, 1);
+  --color-content-600: hsla(0, 0%, 40%, 1);
+  --color-content-700: hsla(0, 0%, 30%, 1);
+  --color-content-800: hsla(0, 0%, 20%, 1);
+  --color-content-900: hsla(0, 0%, 15%, 1);
+  --color-content-950: hsla(0, 0%, 10%, 1);
 }
 
 [data-theme='matrix'] {
   --color-primary: #09ff00;
   --color-default: #000000;
   --color-secondary: #09ff00;
-  --color-accent: #09ff00;
   --color-content-100: #000000;
   --color-content-200: #000000;
   --color-content-300: #000000;
@@ -174,22 +156,28 @@ footer {
   color: var(--color-default);
 }
 
-/* button, 
-[type='button'], 
-[type='reset'], 
-[type='submit'] {
-  background-color: var(--color-secondary);
-  color: var(--color-default);
-} */
-
 header .right {
   @apply flex flex-nowrap items-center gap-2;
 }
 
 header .right a {
-  @apply cursor-pointer px-3 leading-8 no-underline whitespace-nowrap text-sm text-[var(--color-default)] bg-[var(--color-secondary)] rounded-lg;
+  @apply cursor-pointer px-3 leading-8 no-underline whitespace-nowrap text-sm text-[var(--color-content-400)] hover:text-[var(--color-content-100)] bg-[var(--color-content-900)] rounded-lg;
+}
+
+header .right select {
+  @apply cursor-pointer py-0 pl-3 pr-10 leading-8 text-sm text-[var(--color-content-400)] bg-[var(--color-content-900)] rounded-lg border-0 ring-0 outline-0 focus:outline-0 focus:border-0 focus:ring-0 focus-visible:ring-2 focus-visible:ring-[var(--color-content-700)];
 }
 
 main .search-form-column {
   @apply flex items-center justify-between flex-col w-96 text-sm bg-[var(--color-content-900)]
+}
+
+:focus,
+:focus-visible {
+  --tw-ring-color: var(--color-default);
+  border-color: var(--color-primary);
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
 }

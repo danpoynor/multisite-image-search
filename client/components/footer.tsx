@@ -6,17 +6,23 @@ export default function Footer() {
     <footer>
       <Container flexNoWrap py4>
         <nav className="space-x-4">
-          <Link href="/about" className="cursor-pointer hover:text-gray-300">
+          <Link href="/" className="cursor-pointer hover:text-[--color-content-500]">
+            Home
+          </Link>
+          <Link href="/site-list" className="cursor-pointer hover:text-[--color-content-500]">
+            Site List
+          </Link>
+          <Link href="/about" className="cursor-pointer hover:text-[--color-content-500]">
             About
           </Link>
-          <Link href="/contact" className="cursor-pointer hover:text-gray-300">
+          <Link href="/contact" className="cursor-pointer hover:text-[--color-content-500]">
             Contact
           </Link>
-          <Link href="/login" className="cursor-pointer hover:text-gray-300">
+          <Link href="/login" className="cursor-pointer hover:text-[--color-content-500]">
             Login
           </Link>
         </nav>
-        <p className="ml-auto text-xs opacity-50">&copy; 2021 Search.photos</p>
+        <p className="ml-auto text-xs opacity-50">&copy; 2023 Search.photos</p>
       </Container>
     </footer>
   );

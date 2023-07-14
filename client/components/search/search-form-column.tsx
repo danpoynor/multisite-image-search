@@ -47,7 +47,7 @@ export default function SearchFormColumn() {
                         value={searchTerm}
                         onChange={handleSearchTermChange}
                         placeholder="Search for photos"
-                        className="border rounded-md w-full px-2 py-2 focus:outline-none bg-[var(--color-primary)] text-[--color-content-300]"
+                        className="border-2 rounded-md w-full px-2 py-2 focus:outline-none bg-[var(--color-primary)] text-[--color-content-300]"
                     />
                 </div>
                 <div className='mb-4'>
