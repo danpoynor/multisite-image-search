@@ -14,7 +14,7 @@ export default function Header() {
 
   return (
     <header className="w-full">
-      <Container flexNoWrap py4>
+      <Container flexNoWrap py4 fullWidth>
         <HeaderNavbar />
         <HeaderRight />
       </Container>
