@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { searchPhotos } from './searchPhotos'
-import SearchResults from './searchResults'
+import { searchPhotos } from './search-photos'
+import SearchResults from '../gallery/search-results'
 
 export default function Search() {
     const [searchTerm, setSearchTerm] = useState('');

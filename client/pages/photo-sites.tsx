@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import Container from '../components/container';
-import SearchBar from '../components/SearchBar';
-import PhotoSitesTable from '../components/PhotoSitesTable';
+import SearchBar from '../components/search-bar';
+import PhotoSitesTable from '../components/photo-sites-table';
 import { PhotoSite } from '../types';
 
 // Fetch photo sites data from JSON file

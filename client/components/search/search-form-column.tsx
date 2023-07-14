@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { searchPhotos } from './searchPhotos'
+import { searchPhotos } from './search-photos'
 import { useSearchResults } from '../../context/SearchResults';
 import SearchOptions from './search-options';
 

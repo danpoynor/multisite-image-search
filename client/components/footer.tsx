@@ -22,7 +22,7 @@ export default function Footer() {
             Login
           </Link>
         </nav>
-        <p className="ml-auto text-xs opacity-50">&copy; 2023 Search.photos</p>
+        <p className="ml-auto text-xs text-[--color-content-500]">&copy; 2023 Search.photos</p>
       </Container>
     </footer>
   );
