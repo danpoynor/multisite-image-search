@@ -1,6 +1,6 @@
 type GalleryImageProps = {
     src: string;
-    alt: string;
+    alt: string | undefined;
 }
 
 export default function GalleryImage({ src, alt }: GalleryImageProps) {

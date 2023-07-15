@@ -11,7 +11,7 @@ export default function ThemeChooser() {
     // Add select menu to choose theme
     return (
         <div className="form-control max-w-xs">
-            <select data-choose-theme onChange={(e) => themeChange(e.target.value)}>
+            <select data-choose-theme>
                 <option disabled>Theme</option>
                 <option value="slate-light">Slate Light</option>
                 <option value="slate-dark">Slate Dark</option>

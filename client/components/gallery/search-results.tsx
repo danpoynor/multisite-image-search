@@ -2,7 +2,7 @@ import { Photo } from '../../types';
 import Figure from './figure';
 import Figcaption from './figcaption';
 import GalleryImage from './gallery-image';
-import LikeButton from './like-button';
+import ToggleFavorite from './toggle-favorite';
 
 interface Props {
   results: Photo[];
@@ -13,11 +13,12 @@ export default function SearchResults({ results }: Props) {
     <div className="flex flex-wrap gap-0 justify-between w-auto">
       {results.map((photo) => (
         <Figure key={photo.id}>
-          <LikeButton />
+          <ToggleFavorite />
           {/* Render the appropriate photo component based on the photo source */}
           {(photo.url?.includes('www.pexels.com/photo/')) && <PexelsPhoto photo={photo} />}
           {(photo.urls?.small?.includes('images.unsplash.com/photo-')) && <UnsplashPhoto photo={photo} />}
-          {photo.farm && photo.secret && <FlickrPhoto photo={photo} />}
+          {/* NOTE: photo.id used here to make sure Flickr isn't returning 0 */}
+          {photo.farm && photo.secret && photo.id && <FlickrPhoto photo={photo} />}
         </Figure>
       ))}
     </div>
@@ -36,7 +37,7 @@ function PexelsPhoto({ photo }: PhotoProps) {
         <GalleryImage src={photo.src.medium} alt={photo.alt} />
       </a>
       <Figcaption>
-        Photos provided by <a href="https://www.pexels.com/" target="_blank" rel="noopener noreferrer">Pexels</a>
+        Photos provided by <a href="https://www.pexels.com/" target="_blank" rel="noopener noreferrer" className='text-[var(--color-content-400)]'>Pexels</a>
       </Figcaption>
     </>
   );
@@ -50,7 +51,7 @@ function UnsplashPhoto({ photo }: PhotoProps) {
         <GalleryImage src={photo.urls.regular} alt={photo.alt} />
       </a>
       <Figcaption>
-        Photo by <a href={photo.user.links.html} target="_blank" rel="noopener noreferrer">{photo.user.name}</a> on <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">Unsplash</a>
+        Photo by <a href={photo.user.links.html} target="_blank" rel="noopener noreferrer" className='text-[var(--color-content-400)]'>{photo.user.name}</a> on <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer" className='text-[var(--color-content-400)]'>Unsplash</a>
       </Figcaption>
     </>
   );
@@ -66,7 +67,7 @@ function FlickrPhoto({ photo }: PhotoProps) {
         <GalleryImage src={url} alt={photo.title} />
       </a>
       <Figcaption>
-        Photo by <a href={`https://www.flickr.com/photos/${photo.owner}`} target="_blank" rel="noopener noreferrer">{photo.owner}</a> on <a href="https://www.flickr.com/" target="_blank" rel="noopener noreferrer">Flickr</a>
+        Photo by <a href={`https://www.flickr.com/photos/${photo.owner}`} target="_blank" rel="noopener noreferrer" className='text-[var(--color-content-400)]'>{photo.owner}</a> on <a href="https://www.flickr.com/" target="_blank" rel="noopener noreferrer" className='text-[var(--color-content-400)]'>Flickr</a>
       </Figcaption>
     </>
   );

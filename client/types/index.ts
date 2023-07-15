@@ -26,16 +26,11 @@ export interface ErrorResponse {
   }
   
   export interface Photo {
+    farm: number;
+    secret: string;
     id: number;
     width: number;
     height: number;
-    url: string;
-    alt: string | null;
-    avg_color: string | null;
-    photographer: string;
-    photographer_url: string;
-    photographer_id: number;
-    liked: boolean;
     src: {
       original: string;
       large2x: string;
@@ -46,9 +41,39 @@ export interface ErrorResponse {
       landscape: string;
       tiny: string;
     };
+    url: string;
+    urls: {
+      raw: string;
+      full: string;
+      regular: string;
+      small: string;
+      thumb: string;
+    };
+    links: {
+      self: string;
+      html: string;
+      download: string;
+      download_location: string;
+    };
+    alt: string | undefined;
+    title: string;
+    avg_color: string | null;
+    owner: string;
+    photographer: string;
+    photographerUrl: string;
+    photographer_url: string;
+    photographer_id: number;
+    user: {
+      links: {
+        html: string;
+      };
+    };
+    liked: boolean;
   }
   
-  export type Photos = PaginationObject & { photos: Photo[] };
+  export interface Photos extends PaginationObject {
+    photos: Photo[];
+  }
   
   export type PhotosWithTotalResults = Photos & { total_results: number };
   

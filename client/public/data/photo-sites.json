@@ -407,5 +407,13 @@
         "api_documentation_link": "https://www.123rf.com/developers/",
         "notes": "TBD",
         "included": false
+    },
+    {
+        "id": 52,
+        "name": "Can Stock Photo",
+        "site_url": "https://www.canstockphoto.com/",
+        "api_documentation_link": "None",
+        "notes": "No API available",
+        "included": false
     }
 ]
