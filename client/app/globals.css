@@ -165,7 +165,7 @@ header .right a {
 }
 
 header .right select {
-  @apply cursor-pointer py-0 pl-3 pr-10 leading-8 text-sm text-[var(--color-content-400)] bg-[var(--color-content-900)] rounded-lg border-0 ring-0 outline-0 focus:outline-0 focus:border-0 focus:ring-0 focus-visible:ring-2 focus-visible:ring-[var(--color-content-700)];
+  @apply cursor-pointer py-0 pl-9 pr-10 leading-8 text-sm text-[var(--color-content-400)] bg-[var(--color-content-900)] rounded-lg border-0 ring-0 outline-0 focus:outline-0 focus:border-0 focus:ring-0 focus-visible:ring-2 focus-visible:ring-[var(--color-content-700)];
 }
 
 main .search-form-column {
