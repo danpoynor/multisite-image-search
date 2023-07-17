@@ -1,5 +1,5 @@
 import HomeIntro from '../components/home-intro'
-import SearchFormColumn from '../components/search/search-form-column'
+import SearchForm from '../components/search/search-form'
 import { SearchResultsProvider } from '../context/SearchResults'
 
 export const metadata = {
@@ -17,7 +17,7 @@ export const metadata = {
 export default function Home() {
   return (
     <SearchResultsProvider>
-      <SearchFormColumn />
+      <SearchForm />
       <HomeIntro />
     </SearchResultsProvider>
   );

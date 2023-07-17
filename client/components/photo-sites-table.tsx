@@ -61,7 +61,7 @@ export default function PhotoSitesTable({ photoSites }: PhotoSitesTableProps) {
 
   // Render AgGridReact component with columnDefs and photoSites data
   return (
-    <div className="ag-theme-alpine ag-theme-customized" style={{ height: '740px' }}>
+    <div className="ag-theme-alpine ag-theme-customized">
       {/* Override default styles with CSS theme variables */}
         <style>
         {`
@@ -103,6 +103,7 @@ export default function PhotoSitesTable({ photoSites }: PhotoSitesTableProps) {
         columnDefs={columnDefs}
         defaultColDef={defaultColDef}
         rowData={photoSites}
+        domLayout={'autoHeight'}
         pagination={true}
         paginationPageSize={15}
         rowSelection="single"
