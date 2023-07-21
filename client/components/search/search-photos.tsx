@@ -47,7 +47,9 @@ export async function searchPhotos(searchTerm: string, selectedWebsites: string[
         // Pexels
         if (selectedWebsites.includes('pexels')) {
             const response = await pexelsClient.photos.search({ query: searchTerm });
+            // @ts-ignore
             if (response && response.photos) {
+                // @ts-ignore
                 pexelsResults = Array.isArray(response.photos) ? response.photos : Array.from(response.photos);
             }
         }
@@ -65,7 +67,7 @@ export async function searchPhotos(searchTerm: string, selectedWebsites: string[
         const combinedResults = [...unsplashResults, ...pexelsResults, ...flickrResults];
 
         return combinedResults;
-    } catch (error) {
-        throw new Error('Failed to search for photos: ' + error.message || '');
+    } catch (error: unknown) {
+        throw new Error('Failed to search for photos: ' + (error as Error).message || '');
     }
 }

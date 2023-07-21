@@ -1,4 +1,4 @@
-import { ReactNode, useEffect } from 'react';
+import { ReactNode } from 'react';
 import React from 'react';
 import Header from './header/header'
 import Footer from './footer'
@@ -11,9 +11,9 @@ type LayoutProps = {
 
 export default function Layout({ children }: LayoutProps) {
     return (
-        <div className="flex flex-col min-h-screen">
+        <div className="flex min-h-screen flex-col">
             <Header />
-            <main className="flex flex-grow">{children}</main>
+            <main className="flex grow">{children}</main>
             <Footer />
         </div>
     )

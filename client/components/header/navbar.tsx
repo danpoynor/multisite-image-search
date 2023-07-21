@@ -41,7 +41,7 @@ const navItems: {[key: string]: NavItem} = {
 };
 
 function getLinkClassNames(isActive: boolean) {
-  return clsx('transition-all z-[1] px-[.5rem] py-[.33rem] rounded-md leading-8', {
+  return clsx('z-[1] rounded-md px-[.5rem] py-[.33rem] leading-8 transition-all', {
     'cursor-default text-[--color-content-300]': isActive,
     'cursor-pointer text-[--color-content-500] hover:text-[--color-content-100]': !isActive,
   });
@@ -53,11 +53,11 @@ export default function HeaderNavbar() {
   return (
     <>
       <div className="flex items-center">
-        <Link href="/" passHref className={`${pathname === '/' ? 'cursor-default' : 'cursor-pointer'} text-xl font-bold pr-4 block`}>
+        <Link href="/" passHref className={`${pathname === '/' ? 'cursor-default' : 'cursor-pointer'} block pr-4 text-xl font-bold`}>
           Search.photos
         </Link>
 
-        <nav className="space-x-4 ml-4 relative z-0">
+        <nav className="relative z-0 ml-4 space-x-4">
 
           {/* Create links from the link object */}
           {Object.entries(navItems).map(([path, {page_name}]) => {
@@ -78,7 +78,7 @@ export default function HeaderNavbar() {
           {/* Create the background shape and animate it */}
           {navItems[pathname] && (
             <motion.div
-              className="absolute rounded-md h-8 top-0 left-0 !m-0 p-0 z-[-1] bg-[--color-primary]"
+              className="absolute left-0 top-0 z-[-1] !m-0 h-8 rounded-md bg-[--color-primary] p-0"
               initial={{
                 opacity: 0,
                 x: navItems[pathname].x,

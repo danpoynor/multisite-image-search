@@ -4,7 +4,7 @@ type FigcaptionProps = {
 
 export default function Figcaption({ children }: FigcaptionProps) {
     return (
-        <figcaption className='invisible group-hover/item:visible text-xs py-2 px-2 text-start absolute bottom-0 left-0 w-full text-[var(--color-content-200)] bg-[var(--color-content-900)]'>
+        <figcaption className='invisible absolute bottom-0 left-0 w-full bg-[var(--color-content-900)] p-2 text-start text-xs text-[var(--color-content-200)] group-hover/item:visible'>
             {children}
         </figcaption>
     );

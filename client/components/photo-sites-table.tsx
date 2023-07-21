@@ -100,6 +100,7 @@ export default function PhotoSitesTable({ photoSites }: PhotoSitesTableProps) {
         `}
       </style>
       <AgGridReact
+        // @ts-ignore
         columnDefs={columnDefs}
         defaultColDef={defaultColDef}
         rowData={photoSites}

@@ -47,6 +47,8 @@ html, body, blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre {
 
 /* Themes */
 :root {
+  --accent-color: #2563eb;
+
   --color-default: #fff;
   --color-primary: #a0aec0;
   --color-secondary: #718096;
@@ -169,7 +171,7 @@ header .right select {
 }
 
 main .search-form-column {
-  @apply flex items-center justify-between flex-col w-96 text-sm bg-[var(--color-content-900)]
+  @apply flex items-center flex-col w-96 text-sm bg-[var(--color-content-900)]
 }
 
 :focus,
@@ -180,4 +182,40 @@ main .search-form-column {
 
 :focus:not(:focus-visible) {
   outline: none;
+}
+
+[type='text'],
+[type='email'],
+[type='url'],
+[type='password'],
+[type='number'],
+[type='date'],
+[type='datetime-local'],
+[type='month'],
+[type='search'],
+[type='tel'],
+[type='time'],
+[type='week'],
+[multiple],
+textarea {
+  caret-color: var(--accent-color);
+}
+
+[type='text']:focus, 
+input:where(:not([type])):focus, 
+[type='email']:focus, 
+[type='url']:focus, 
+[type='password']:focus, 
+[type='number']:focus, 
+[type='date']:focus, 
+[type='datetime-local']:focus, 
+[type='month']:focus, 
+[type='search']:focus, 
+[type='tel']:focus, 
+[type='time']:focus, 
+[type='week']:focus, 
+[multiple]:focus, 
+textarea:focus, 
+select:focus {
+      box-shadow: none;
 }

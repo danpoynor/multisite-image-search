@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "lint:no-cache": "next lint --no-cache"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.15",
@@ -18,8 +20,8 @@
     "ag-grid-react": "^30.0.4",
     "autoprefixer": "^10.4.14",
     "clsx": "^1.2.1",
-    "eslint": "^8.44.0",
-    "eslint-config-next": "^13.4.9",
+    "eslint": "^8.45.0",
+    "eslint-config-next": "^13.4.11",
     "flickr-sdk": "^6.2.1",
     "framer-motion": "^10.12.18",
     "next": "^13.4.9",
@@ -37,6 +39,32 @@
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.4",
     "eslint-plugin-tailwindcss": "^3.13.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "next/core-web-vitals", 
+      "plugin:tailwindcss/recommended"
+    ],
+    "plugins": [
+      "tailwindcss"
+    ],
+    "settings": {
+      "tailwindcss": {
+        "whitelist": [
+          "ag-theme-alpine",
+          "ag-theme-customized"
+        ]
+      }
+    },
+    "rules": {
+      "no-unused-vars": [
+        "warn",
+        {
+          "argsIgnorePattern": "^_",
+          "varsIgnorePattern": "^_"
+        }
+      ]
+    }
   },
   "browserslist": {
     "production": [

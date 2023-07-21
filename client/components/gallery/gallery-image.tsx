@@ -5,6 +5,6 @@ type GalleryImageProps = {
 
 export default function GalleryImage({ src, alt }: GalleryImageProps) {
     return (
-        <img src={src} alt={alt} className="w-full h-full object-cover" />
+        <img src={src} alt={alt} className="h-full w-full object-cover" />
     )
 }

@@ -1,4 +1,3 @@
-import { ReactNode, useEffect } from 'react';
 import Container from '../container'
 import HeaderNavbar from './navbar'
 import HeaderRight from './right';

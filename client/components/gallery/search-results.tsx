@@ -10,7 +10,7 @@ interface Props {
 
 export default function SearchResults({ results }: Props) {
   return (
-    <div className="flex flex-wrap gap-0 justify-between w-auto">
+    <div className="flex w-auto flex-wrap justify-between gap-0">
       {results.map((photo) => (
         <Figure key={photo.id}>
           <ToggleFavorite />

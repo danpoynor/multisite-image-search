@@ -35,7 +35,7 @@
         "id": 5,
         "name": "Getty Images",
         "site_url": "https://www.gettyimages.com/",
-        "api_documentation_link": "https://developers.gettyimages.com/en/",
+        "api_documentation_link": "https://developers.gettyimages.com/",
         "notes": "TBD",
         "included": false
     },
@@ -415,5 +415,141 @@
         "api_documentation_link": "None",
         "notes": "No API available",
         "included": false
-    }
+    },
+    {
+        "id": 53,
+        "name": "freepik.com",
+        "site_url": "https://www.freepik.com/",
+        "api_documentation_link": "None",
+        "notes": "No API available",
+        "included": false
+      },
+      {
+        "id": 54,
+        "name": "freelyphotos.com",
+        "site_url": "https://www.freelyphotos.com/",
+        "api_documentation_link": "None",
+        "notes": "No API available",
+        "included": false
+      },
+      {
+        "id": 55,
+        "name": "goodstock.photos",
+        "site_url": "http://goodstock.photos/",
+        "api_documentation_link": "None",
+        "notes": "No API available",
+        "included": false
+      },
+      {
+        "id": 56,
+        "name": "libreshot.com",
+        "site_url": "http://libreshot.com/",
+        "api_documentation_link": "None",
+        "notes": "No API available",
+        "included": false
+      },
+      {
+        "id": 57,
+        "name": "The Picture Pantry",
+        "site_url": "https://www.thepicturepantry.com/",
+        "api_documentation_link": "None",
+        "notes": "No API available",
+        "included": false
+      },
+      {
+        "id": 58,
+        "name": "Crestock",
+        "site_url": "http://www.crestock.com/",
+        "api_documentation_link": "None",
+        "notes": "No API available",
+        "included": false
+      },
+      {
+        "id": 59,
+        "name": "Design Pics",
+        "site_url": "https://www.designpics.com/",
+        "api_documentation_link": "None",
+        "notes": "No API available",
+        "included": false
+      },
+      {
+        "id": 60,
+        "name": "Masterfile",
+        "site_url": "https://www.masterfile.com/",
+        "api_documentation_link": "None",
+        "notes": "No API available",
+        "included": false
+      },
+      {
+        "id": 61,
+        "name": "AerialStock",
+        "site_url": "https://www.aerialstock.com/",
+        "api_documentation_link": "None",
+        "notes": "No API available",
+        "included": false
+      },
+      {
+        "id": 62,
+        "name": "Erickson Stock",
+        "site_url": "https://www.ericksonstock.com/",
+        "api_documentation_link": "None",
+        "notes": "No API available",
+        "included": false
+      },
+      {
+        "id": 63,
+        "name": "PeopleImages.com",
+        "site_url": "https://peopleimages.com/",
+        "api_documentation_link": "None",
+        "notes": "No API available",
+        "included": false
+      },
+      {
+        "id": 64,
+        "name": "PhotoShelter",
+        "site_url": "https://www.photoshelter.com/",
+        "api_documentation_link": "https://get.photoshelter.com/developer/index",
+        "notes": "TBD",
+        "included": false
+      },
+      {
+        "id": 65,
+        "name": "PressFoto",
+        "site_url": "https://www.pressfoto.ru/",
+        "api_documentation_link": "None",
+        "notes": "No API available",
+        "included": false
+      },
+      {
+        "id": 66,
+        "name": "Gallery Stock",
+        "site_url": "https://www.gallerystock.com/",
+        "api_documentation_link": "None",
+        "notes": "No API available",
+        "included": false
+      },
+      {
+        "id": 67,
+        "name": "plainpicture",
+        "site_url": "https://www.plainpicture.com/",
+        "api_documentation_link": "None",
+        "notes": "No API available",
+        "included": false
+      },
+      {
+        "id": 68,
+        "name": "Pixta",
+        "site_url": "https://www.pixtastock.com/",
+        "api_documentation_link": "None",
+        "notes": "No API available",
+        "included": false
+      },
+      {
+        "id": 69,
+        "name": "Colourbox",
+        "site_url": "https://www.colourbox.com/",
+        "api_documentation_link": "https://www.colourbox.com/api",
+        "notes": "TBD",
+        "included": false
+      }
 ]
