@@ -1,8 +1,9 @@
+"use client"
+
 import { createContext, useContext, useState } from 'react';
 
 type SearchResultsContextType = {
   searchResults: string[];
-  setSearchResults: (searchResults: string[]) => void;
 };
 
 const SearchResultsContext = createContext<SearchResultsContextType>({

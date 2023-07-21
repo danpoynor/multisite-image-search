@@ -1,4 +1,5 @@
-// import { useSearchResults } from '../context/SearchResults';
+"use client"
+
 import { useSearch } from '../context/SearchContext';
 import SearchResults from './gallery/search-results'
 

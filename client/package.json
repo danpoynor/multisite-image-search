@@ -19,12 +19,12 @@
     "ag-grid-community": "^30.0.3",
     "ag-grid-react": "^30.0.4",
     "autoprefixer": "^10.4.14",
-    "clsx": "^1.2.1",
+    "clsx": "^2.0.0",
     "eslint": "^8.45.0",
     "eslint-config-next": "^13.4.11",
     "flickr-sdk": "^6.2.1",
-    "framer-motion": "^10.12.18",
-    "next": "^13.4.9",
+    "framer-motion": "^10.13.0",
+    "next": "^13.4.12",
     "next-auth": "^4.22.1",
     "pexels": "^1.4.0",
     "postcss": "^8.4.25",
@@ -42,7 +42,7 @@
   },
   "eslintConfig": {
     "extends": [
-      "next/core-web-vitals", 
+      "next/core-web-vitals",
       "plugin:tailwindcss/recommended"
     ],
     "plugins": [

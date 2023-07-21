@@ -1,3 +1,5 @@
+"use client"
+
 // REF: https://github.com/saadeghi/theme-change
 import { useEffect } from 'react';
 import { themeChange } from 'theme-change'
