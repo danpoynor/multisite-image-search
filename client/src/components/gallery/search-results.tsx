@@ -1,4 +1,4 @@
-import { Photo } from '../../types';
+import { Photo } from '@/types';
 import Figure from './figure';
 import Figcaption from './figcaption';
 import GalleryImage from './gallery-image';

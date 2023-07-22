@@ -1,4 +1,4 @@
-import Container from '../container'
+import Container from '@/components/container'
 import HeaderNavbar from './navbar'
 import HeaderRight from './right';
 

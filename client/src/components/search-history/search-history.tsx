@@ -1,4 +1,4 @@
-import { useSearch } from '../../context/SearchContext';
+import { useSearch } from '@/context/SearchContext';
 import SearchHistoryItem from './search-history-item';
 
 interface SearchHistoryItem {
@@ -6,9 +6,9 @@ interface SearchHistoryItem {
 }
 
 export default function SearchHistory() {
-    const { 
-        searchHistory, 
-        activeIndex 
+    const {
+        searchHistory,
+        activeIndex
     } = useSearch();
 
     return (

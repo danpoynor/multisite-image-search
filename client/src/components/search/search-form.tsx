@@ -1,10 +1,10 @@
 "use client"
 
 import { useEffect } from 'react';
-import { useSearch } from '../../context/SearchContext';
-import SearchOptions from './search-options';
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid';
-import SearchHistory from '../search-history/search-history';
+import { useSearch } from '@/context/SearchContext';
+import SearchHistory from '@/components/search-history/search-history';
+import SearchOptions from './search-options';
 
 export default function SearchForm() {
     const {

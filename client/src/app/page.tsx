@@ -1,7 +1,7 @@
-import HomeIntro from '../components/home-intro'
-import SearchForm from '../components/search/search-form'
-import { SearchResultsProvider } from '../context/SearchResults'
-import { SearchProvider } from '../context/SearchContext'
+import HomeIntro from '@/components/home-intro'
+import SearchForm from '@/components/search/search-form'
+import { SearchResultsProvider } from '@/context/SearchResults'
+import { SearchProvider } from '@/context/SearchContext'
 
 export const metadata = {
   title: "Home",

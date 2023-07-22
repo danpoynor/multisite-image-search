@@ -1,5 +1,5 @@
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
-import { PhotoSite } from '../types';
+import { PhotoSite } from '@/types';
 
 interface SearchBarProps {
   setSearchText: React.Dispatch<React.SetStateAction<string>>;

@@ -1,14 +1,14 @@
-import Container from '../../components/container'
+import Container from '@/components/container'
 
 export const metadata = {
   title: "Login",
   description: "Login page",
 }
 
-export default function Login() {
+export default function SignIn() {
   return (
     <Container>
-      <h1 className="mt-8 text-2xl font-bold">Login</h1>
+      <h1 className="mt-8 text-2xl font-bold">Sign In</h1>
       <div className="flex w-full items-center justify-center">
         <form className="w-full rounded-lg md:w-1/3">
           <div className="px-12 pb-10">

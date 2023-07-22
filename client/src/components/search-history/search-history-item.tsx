@@ -1,4 +1,4 @@
-import { useSearch } from '../../context/SearchContext';
+import { useSearch } from '@/context/SearchContext';
 
 interface SearchHistoryItemProps {
     key: number;
@@ -14,8 +14,9 @@ export default function SearchHistoryItem({ searchHistoryItemTerm, isActive, ind
         handleSearchTermChange,
     } = useSearch();
 
-    // Avoid the handleRemoveItem function from being called immediately with the index prop.
-    // This ensures the handleRemoveItem function is only called when the button is clicked.
+    // Avoid the handleRemoveItem and handleRerunSearch functions from being called
+    // immediately when the component loads each time.
+    // These ensure the functions are only called when a button is clicked.
     const handleClickRemove = () => {
         handleRemoveItem(index);
     };
@@ -62,7 +63,9 @@ export default function SearchHistoryItem({ searchHistoryItemTerm, isActive, ind
             <input
                 type="text"
                 value={searchHistoryItemTerm}
-                onChange={handleSearchTermChange} // Call handleSearchTermChange on input change
+                // handleSearchTermChange removes the active state if
+                // the search term input field is manually edited.
+                onChange={handleSearchTermChange}
                 className="hidden"
             />
         </li>

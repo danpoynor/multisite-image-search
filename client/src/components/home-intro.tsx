@@ -1,7 +1,7 @@
 "use client"
 
-import { useSearch } from '../context/SearchContext';
-import SearchResults from './gallery/search-results'
+import { useSearch } from '@/context/SearchContext';
+import SearchResults from '@/components/gallery/search-results'
 
 export default function HomeIntro() {
     const { searchResults } = useSearch();
