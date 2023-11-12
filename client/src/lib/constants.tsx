@@ -1,5 +1,5 @@
 // Constant to limit the number of photos returned to 10
-const MAX_RESULTS = 5;
+const MAX_RESULTS = 10;
 
 // Constant of forbidden words
 // TODO: Consider installing bad-words filter npm package
