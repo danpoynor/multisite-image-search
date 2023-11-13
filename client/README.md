@@ -20,29 +20,28 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 - [ ] Figure out image click UX (opens a modal with large image or goes the source details page?)
 - [ ] Fix bug with search form updating gallery on every click (maybe useEffect issue?)
-- [ ] Adapt code for multi-tenent use (search.photos and search.graphics)
-- [ ] Add a `About` page
-- [ ] Add a `Contact` page
-- [ ] Add a `Privacy Policy` page
-- [ ] Add a `Terms of Service` page
+- [ ] Adapt code for multi-tenant use (search.photos and search.graphics)
+- [ ] Add `About` page content
+- [ ] Add `Contact` page content
+- [ ] Add `Privacy Policy` page content
+- [ ] Add `Terms of Service` page content
 - [ ] Add a `Login` page
 - [ ] Add a `Signup` page
-- [ ] Add a `404` page
+- [x] Add a `404` page
 - [ ] Add a `500` page
 - [ ] Add a `503` page
-- [ ] Limit results to 10 per source
+- [x] Limit results to 10 per source
 - [ ] Add a `Loading...` component
-- [ ] Fix theme and accent colors
+- [x] Fix theme and accent colors
 - [ ] Create background image for for home page photos
 - [ ] Create background image for for home page graphics
 - [ ] Create favicon for photos and graphics sites
-- [ ] Add a `robots.txt` file
+- [x] Add a `robots.txt` file
 - [ ] Add a `sitemap.xml` file
-- [ ] Add a `humans.txt` file
+- [x] Add a `humans.txt` file
 - [ ] Optimize pages for SEO
 - [ ] Add Google Analytics
 - [ ] Add Google Tag Manager
-- [ ] Test in Lightroom
 - [ ] Add unit tests
 
 ### Server TODO
