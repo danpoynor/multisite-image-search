@@ -19,7 +19,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ### Client TODO
 
 - [ ] Figure out image click UX (opens a modal with large image or goes the source details page?)
-- [ ] Fix bug with search form updating gallery on every click (maybe useEffect issue?)
+- [ ] Make Pexel images clickable.
+- [ ] Fix bug with search input updating gallery on every click/key press.
+- [ ] Get 'Rerun' in Search History working again.
 - [ ] Adapt code for multi-tenant use (search.photos and search.graphics)
 - [ ] Add `About` page content
 - [ ] Add `Contact` page content
