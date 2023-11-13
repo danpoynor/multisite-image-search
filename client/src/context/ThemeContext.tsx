@@ -8,12 +8,7 @@ const ThemeContext = createContext({
 });
 
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return window.localStorage.getItem('theme') || 'slate-light';
-    }
-    return 'slate-light';
-  });
+  const [theme, setTheme] = useState('slate-light');
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
