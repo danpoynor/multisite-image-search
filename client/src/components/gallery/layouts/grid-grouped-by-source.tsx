@@ -10,7 +10,7 @@ export default function GridGroupedBySource() {
   const images = Object.values(searchResults).flat();
 
   return (
-    <div className="flex w-auto flex-wrap justify-between gap-0">
+    <div className="flex w-auto flex-wrap gap-0 text-left">
       {images.map((image) => (
         <Figure key={image.id} image={image} />
       ))}

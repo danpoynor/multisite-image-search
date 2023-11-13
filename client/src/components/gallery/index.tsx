@@ -14,7 +14,7 @@ export default function Gallery() {
 
   return (
     <>
-      <div className="mb-3 flex items-center justify-between text-start text-sm">
+      <div className="mb-3 flex items-center text-start text-sm">
         <Details />
         <Settings />
       </div>

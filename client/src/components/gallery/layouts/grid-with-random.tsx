@@ -10,7 +10,7 @@ export default function GridWithRandomResults() {
   const randomOrderImages = Object.values(searchResults).flat().sort(() => Math.random() - 0.5);
 
   return (
-    <div className="flex w-auto flex-wrap justify-between gap-0 text-left">
+    <div className="flex w-auto flex-wrap gap-0 text-left">
       {randomOrderImages.map((image) => (
         <Figure key={image.id} image={image} />
       ))}

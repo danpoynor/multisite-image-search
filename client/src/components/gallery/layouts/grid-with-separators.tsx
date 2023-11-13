@@ -7,7 +7,7 @@ export default function GridWithSeparatedResults() {
   } = useSearch();
 
   return (
-    <div className="flex w-auto flex-wrap justify-between gap-0 text-left [&>section:nth-child(n+2)]:mt-6">
+    <div className="flex w-auto flex-wrap gap-0 text-left [&>section:nth-child(n+2)]:mt-6">
       {Object.keys(searchResults).map((key) => {
         const images = searchResults[key];
         return (
@@ -18,7 +18,7 @@ export default function GridWithSeparatedResults() {
                 <h3 className='text-sm font-normal'>{key}: <span className='text-[var(--color-content-500)]'>{images.length} results</span></h3>
               </div>
             </div>
-            <div className='flex w-auto flex-wrap justify-between gap-0'>
+            <div className='flex w-auto flex-wrap gap-0'>
               {images.map((image) => (
                 <Figure key={image.id} image={image} />
               ))}

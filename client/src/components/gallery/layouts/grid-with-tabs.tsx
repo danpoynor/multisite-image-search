@@ -9,7 +9,7 @@ export default function GridWithTabbedResults() {
   const [activeTab, setActiveTab] = useState(Object.keys(searchResults)[0]);
 
   return (
-    <div className="flex w-auto flex-wrap justify-between gap-0 text-left [&>section:nth-child(n+2)]:mt-6">
+    <div className="flex w-auto flex-wrap gap-0 text-left [&>section:nth-child(n+2)]:mt-6">
       <div className="flex w-full gap-2 border-b-[1px] border-[var(--color-content-700)]">
         {Object.keys(searchResults).map((key) => (
           <button
@@ -30,7 +30,7 @@ export default function GridWithTabbedResults() {
         ))}
       </div>
       <section>
-        <div className="flex w-auto flex-wrap justify-between gap-0">
+        <div className="flex w-auto flex-wrap gap-0">
           {searchResults[activeTab].map((image) => (
             <Figure key={image.id} image={image} />
           ))}
