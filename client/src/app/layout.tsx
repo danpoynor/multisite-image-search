@@ -12,11 +12,11 @@ export const metadata: Metadata = {
   title: 'Search.Photos: Multisite Image Search',
   description: 'Search multiple websites for images with one click!',
   robots: {
-    index: true,
-    follow: true,
+    index: false, // turn off indexing for all pages while in development
+    follow: false,
     googleBot: {
-      index: true,
-      follow: true,
+      index: false,
+      follow: false,
       'max-snippet': -1,
       'max-image-preview': 'large',
       'max-video-preview': '-1',
